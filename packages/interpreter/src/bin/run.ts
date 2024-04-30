@@ -1,4 +1,4 @@
-import { Ingestible } from "@withorbit/ingester";
+import { Ingestible } from "@habilis/ingester";
 import fs from "fs";
 import path from "path";
 import { MarkdownInterpreter } from "../interpreters/index.js";

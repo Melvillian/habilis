@@ -1,5 +1,5 @@
-import { API, OrbitAPI, OrbitAPIValidator } from "@withorbit/api";
-import { AttachmentID, AttachmentMIMEType, TaskID } from "@withorbit/core";
+import { API, OrbitAPI, OrbitAPIValidator } from "@habilis/api";
+import { AttachmentID, AttachmentMIMEType, TaskID } from "@habilis/core";
 import { APIConfig, defaultAPIConfig } from "./apiConfig.js";
 import { AuthenticationConfig, RequestManager } from "./requestManager.js";
 import { createBlobFromBuffer, getBytesFromBlobLike } from "./util/fetch.js";

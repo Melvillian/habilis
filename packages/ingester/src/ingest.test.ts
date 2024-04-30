@@ -7,8 +7,8 @@ import {
   TaskSpecType,
   TaskUpdateDeletedEvent,
   TaskUpdateProvenanceEvent,
-} from "@withorbit/core";
-import { OrbitStoreInMemory } from "@withorbit/store-fs";
+} from "@habilis/core";
+import { OrbitStoreInMemory } from "@habilis/store-fs";
 import {
   DuplicateItemIdentifierError,
   ingestSources,

@@ -1,4 +1,4 @@
-import { Event } from "@withorbit/core";
+import { Event } from "@habilis/core";
 import { EventsValidator, EventsValidatorError } from "./eventsValidator.js";
 import AjvModule, { ValidateFunction as AjvValidationFunction } from "ajv";
 import DatabaseEventsSchema from "./events.json" assert { type: "json" };

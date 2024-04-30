@@ -1,4 +1,4 @@
-import { Event } from "@withorbit/core";
+import { Event } from "@habilis/core";
 
 type Events = Event[];
 

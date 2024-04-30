@@ -1,5 +1,5 @@
 {
-  "name": "@withorbit/api",
+  "name": "@habilis/api",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -15,7 +15,7 @@
     "generateSchema": "typescript-json-schema src/orbitAPI.ts ValidatableSpec -o src/orbitAPISchema.json --noExtraProps --required --ignoreErrors --strictNullChecks"
   },
   "dependencies": {
-    "@withorbit/core": "0.0.1",
+    "@habilis/core": "0.0.1",
     "ajv": "^8.6.2"
   },
   "devDependencies": {

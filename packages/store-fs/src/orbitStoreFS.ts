@@ -1,4 +1,4 @@
-import { Database, OrbitStore } from "@withorbit/store-shared";
+import { Database, OrbitStore } from "@habilis/store-shared";
 import { AttachmentStoreFS } from "./attachmentStoreFS.js";
 import { SQLDatabaseBackend } from "./sqlite.js";
 

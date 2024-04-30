@@ -1,4 +1,4 @@
-import { EntityID, EntityType, EventID } from "@withorbit/core";
+import { EntityID, EntityType, EventID } from "@habilis/core";
 
 export enum DexieTable {
   Events = "events",

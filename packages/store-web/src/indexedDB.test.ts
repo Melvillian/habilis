@@ -1,9 +1,9 @@
-import { Entity, EventID, EventType, Task, TaskID } from "@withorbit/core";
-import { createTestTask } from "@withorbit/sample-data";
+import { Entity, EventID, EventType, Task, TaskID } from "@habilis/core";
+import { createTestTask } from "@habilis/sample-data";
 import {
   DatabaseBackend,
   DatabaseBackendEntityRecord,
-} from "@withorbit/store-shared";
+} from "@habilis/store-shared";
 // @ts-ignore Looks like there is no @types for this library
 import FDBFactory from "fake-indexeddb/lib/FDBFactory";
 import { IDBDatabaseBackend } from "./indexedDB.js";

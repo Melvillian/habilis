@@ -3,14 +3,14 @@ import {
   TaskContentType,
   TaskSpec,
   TaskSpecType,
-} from "@withorbit/core";
+} from "@habilis/core";
 import {
   Ingestible,
   IngestibleItem,
   IngestibleItemIdentifier,
   IngestibleSource,
   IngestibleSourceIdentifier,
-} from "@withorbit/ingester";
+} from "@habilis/ingester";
 import mdast, * as Mdast from "mdast";
 import { selectAll } from "unist-util-select";
 import { Hasher } from "../../hasher/hasher.js";

@@ -1,6 +1,7 @@
-# `@withorbit/store-web`
+# `@habilis/store-web`
 
-Implementation of `OrbitStore` for web browser contexts. See `@withorbit/store-shared` for type definitions.
+Implementation of `OrbitStore` for web browser contexts. See
+`@habilis/store-shared` for type definitions.
 
 ```
 Copyright 2021 Andy Matuschak

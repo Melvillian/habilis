@@ -1,5 +1,5 @@
 {
-  "name": "@withorbit/sample-data",
+  "name": "@habilis/sample-data",
   "version": "0.0.1",
   "private": true,
   "license": "Apache-2.0",
@@ -11,7 +11,7 @@
     "dist"
   ],
   "dependencies": {
-    "@withorbit/core": "0.0.1"
+    "@habilis/core": "0.0.1"
   },
   "devDependencies": {
     "typescript": "^5.3.3"

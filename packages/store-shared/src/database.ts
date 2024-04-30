@@ -5,7 +5,7 @@ import {
   EventID,
   eventReducer as _eventReducer,
   IDOfEntity,
-} from "@withorbit/core";
+} from "@habilis/core";
 import {
   DatabaseBackend,
   DatabaseBackendEntityRecord,

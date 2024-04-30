@@ -1,9 +1,9 @@
-import { EntityType, EventID, EventType, Task, TaskID } from "@withorbit/core";
-import { createTestTask } from "@withorbit/sample-data";
+import { EntityType, EventID, EventType, Task, TaskID } from "@habilis/core";
+import { createTestTask } from "@habilis/sample-data";
 import {
   DatabaseBackend,
   DatabaseBackendEntityRecord,
-} from "@withorbit/store-shared";
+} from "@habilis/store-shared";
 import { tmpdir } from "os";
 import path from "path";
 import {

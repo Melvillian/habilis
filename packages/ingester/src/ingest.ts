@@ -10,8 +10,8 @@ import {
   TaskProvenance,
   TaskUpdateDeletedEvent,
   TaskUpdateProvenanceEvent,
-} from "@withorbit/core";
-import { DatabaseEntityQuery, OrbitStore } from "@withorbit/store-shared";
+} from "@habilis/core";
+import { DatabaseEntityQuery, OrbitStore } from "@habilis/store-shared";
 import {
   IngestibleItem,
   IngestibleItemIdentifier,

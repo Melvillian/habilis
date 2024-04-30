@@ -9,7 +9,7 @@ import {
   Task,
   TaskID,
   TaskIngestEvent,
-} from "@withorbit/core";
+} from "@habilis/core";
 import { testClozeSpec } from "./testClozeSpec.js";
 
 export const testTask: Task = {

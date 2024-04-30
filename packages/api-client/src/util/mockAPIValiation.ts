@@ -1,4 +1,4 @@
-import { APIValidator } from "@withorbit/api";
+import { APIValidator } from "@habilis/api";
 
 export class MockOrbitAPIValidation implements APIValidator {
   validateRequest(): true {

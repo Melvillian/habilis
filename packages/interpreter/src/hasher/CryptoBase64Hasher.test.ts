@@ -1,4 +1,4 @@
-import { TaskContentType, TaskSpec, TaskSpecType } from "@withorbit/core";
+import { TaskContentType, TaskSpec, TaskSpecType } from "@habilis/core";
 import { CryptoBase64Hasher } from "./CryptoBase64Hasher.js";
 
 it("hashes", () => {

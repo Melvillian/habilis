@@ -1,5 +1,5 @@
 {
-  "name": "@withorbit/interpreter",
+  "name": "@habilis/interpreter",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,9 +13,9 @@
     "migrateNoteSync": "node dist/bin/migrateNoteSync.js"
   },
   "dependencies": {
-    "@withorbit/core": "0.0.1",
-    "@withorbit/ingester": "0.0.1",
-    "@withorbit/store-fs": "0.0.1",
+    "@habilis/core": "0.0.1",
+    "@habilis/ingester": "0.0.1",
+    "@habilis/store-fs": "0.0.1",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-heading-range": "^4.0.0",
     "micromark-util-character": "^2.0.1",

@@ -1,4 +1,4 @@
-import { API } from "@withorbit/api";
+import { API } from "@habilis/api";
 
 export async function getBytesFromBlobLike(
   blobLike: API.BlobLike<any>,

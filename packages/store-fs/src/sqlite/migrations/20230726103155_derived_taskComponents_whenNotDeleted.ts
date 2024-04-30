@@ -1,4 +1,4 @@
-import { EntityType } from "@withorbit/core";
+import { EntityType } from "@habilis/core";
 import { SQLMigration } from "./migrationType.js";
 
 const migration: SQLMigration = {

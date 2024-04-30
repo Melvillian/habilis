@@ -1,4 +1,4 @@
-import { EntityType, Task } from "@withorbit/core";
+import { EntityType, Task } from "@habilis/core";
 import * as Dexie from "dexie";
 import { Dexie as DexieDB } from "dexie";
 import {

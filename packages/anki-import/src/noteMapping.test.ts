@@ -1,4 +1,4 @@
-import { ClozeTaskContent, TaskContentType } from "@withorbit/core";
+import { ClozeTaskContent, TaskContentType } from "@habilis/core";
 import withTestAnkiCollection from "./__fixtures__/withTestAnkiCollection.js";
 import {
   AnkiCollectionDBHandle,

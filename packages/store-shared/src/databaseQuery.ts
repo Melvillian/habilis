@@ -4,7 +4,7 @@ import {
   IDOfEntity,
   Task,
   TypeOfEntity,
-} from "@withorbit/core";
+} from "@habilis/core";
 
 export interface DatabaseEventQuery extends DatabaseQueryOptions<EventID> {
   predicate?: DatabaseQueryPredicate<"entityID", "=", string>;

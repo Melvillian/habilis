@@ -1,5 +1,5 @@
 {
-  "name": "@withorbit/store-shared",
+  "name": "@habilis/store-shared",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "private": true,
@@ -16,12 +16,12 @@
     "generateSchema": "typescript-json-schema src/validation/eventsValidator.ts Events -o src/validation/events.json --noExtraProps --required --ignoreErrors --strictNullChecks"
   },
   "dependencies": {
-    "@withorbit/core": "0.0.1",
+    "@habilis/core": "0.0.1",
     "ajv": "^8.6.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
-    "@withorbit/sample-data": "0.0.1",
+    "@habilis/sample-data": "0.0.1",
     "typescript": "^5.3.3",
     "typescript-json-schema": "^0.50.1"
   }

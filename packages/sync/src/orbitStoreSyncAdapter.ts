@@ -1,10 +1,10 @@
-import { OrbitStore } from "@withorbit/store-shared";
+import { OrbitStore } from "@habilis/store-shared";
 import {
   AttachmentID,
   AttachmentMIMEType,
   Event,
   EventID,
-} from "@withorbit/core";
+} from "@habilis/core";
 import { SyncAdapter } from "./syncAdapter.js";
 
 export class OrbitStoreSyncAdapter implements SyncAdapter {

@@ -1,4 +1,4 @@
-import { ColorPaletteName, TaskSpec } from "@withorbit/core";
+import { ColorPaletteName, TaskSpec } from "@habilis/core";
 
 export type Ingestible = {
   sources: IngestibleSource[];

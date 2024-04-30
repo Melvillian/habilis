@@ -1,5 +1,5 @@
 {
-  "name": "@withorbit/ingester",
+  "name": "@habilis/ingester",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,9 +13,9 @@
     "generateSchema": "typescript-json-schema src/ingestible.ts Ingestible -o src/ingestible.json --noExtraProps --required --ignoreErrors --strictNullChecks"
   },
   "dependencies": {
-    "@withorbit/core": "0.0.1",
-    "@withorbit/store-fs": "0.0.1",
-    "@withorbit/store-shared": "0.0.1",
+    "@habilis/core": "0.0.1",
+    "@habilis/store-fs": "0.0.1",
+    "@habilis/store-shared": "0.0.1",
     "ajv": "^8.6.2",
     "lodash.isequal": "^4.5.0"
   },

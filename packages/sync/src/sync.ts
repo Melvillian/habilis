@@ -3,8 +3,8 @@ import {
   Event,
   EventID,
   EventType,
-} from "@withorbit/core";
-import { OrbitStore } from "@withorbit/store-shared";
+} from "@habilis/core";
+import { OrbitStore } from "@habilis/store-shared";
 import { OrbitStoreSyncAdapter } from "./orbitStoreSyncAdapter.js";
 import { SyncAdapter } from "./syncAdapter.js";
 

@@ -1,10 +1,10 @@
-import { AttachmentIngestEvent, Event } from "@withorbit/core";
+import { AttachmentIngestEvent, Event } from "@habilis/core";
 import {
   createTestAttachmentIngestEvents,
   createTestTaskIngestEvents,
-} from "@withorbit/sample-data";
-import OrbitStoreFS from "@withorbit/store-fs";
-import { OrbitStore } from "@withorbit/store-shared";
+} from "@habilis/sample-data";
+import OrbitStoreFS from "@habilis/store-fs";
+import { OrbitStore } from "@habilis/store-shared";
 import os from "os";
 import path from "path";
 import { OrbitStoreSyncAdapter } from "./orbitStoreSyncAdapter.js";

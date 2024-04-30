@@ -1,4 +1,4 @@
-import { API, APIValidator, APIValidatorError } from "@withorbit/api";
+import { API, APIValidator, APIValidatorError } from "@habilis/api";
 import { APIConfig } from "./apiConfig.js";
 
 const enableDebugTrace = !!process.env["ORBIT_REQUEST_DEBUG"];

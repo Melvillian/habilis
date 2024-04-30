@@ -3,7 +3,7 @@ import {
   Database,
   EventReducer,
   OrbitStore,
-} from "@withorbit/store-shared";
+} from "@habilis/store-shared";
 import { AttachmentStoreFS } from "./attachmentStoreFS.js";
 import { SQLDatabaseBackend } from "./sqlite.js";
 

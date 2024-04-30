@@ -12,8 +12,8 @@ import {
   Task,
   TaskID,
   TaskIngestEvent,
-} from "@withorbit/core";
-import { testTask } from "@withorbit/sample-data";
+} from "@habilis/core";
+import { testTask } from "@habilis/sample-data";
 import { Database, EventReducer } from "./database.js";
 import { AjvEventsValidator } from "./validation/AjvEventsValidator.js";
 import { EventsValidator } from "./validation/eventsValidator.js";

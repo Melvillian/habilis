@@ -1,5 +1,5 @@
-import { AttachmentID, AttachmentMIMEType } from "@withorbit/core";
-import { AttachmentStore } from "@withorbit/store-shared";
+import { AttachmentID, AttachmentMIMEType } from "@habilis/core";
+import { AttachmentStore } from "@habilis/store-shared";
 import { SQLDatabaseBackend } from "./sqlite.js";
 
 // Facade exposing attachment I/O via SQLite blobs.

@@ -3,7 +3,7 @@ import {
   AttachmentID,
   AttachmentMIMEType,
   getFileExtensionForAttachmentMIMEType,
-} from "@withorbit/core";
+} from "@habilis/core";
 
 export function getPathForAttachment(
   basePath: string,

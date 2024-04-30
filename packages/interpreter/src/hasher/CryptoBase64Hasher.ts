@@ -5,7 +5,7 @@ import {
   TaskContent,
   TaskContentType,
   TaskSpec,
-} from "@withorbit/core";
+} from "@habilis/core";
 import crypto from "crypto";
 import { Hasher } from "./hasher.js";
 

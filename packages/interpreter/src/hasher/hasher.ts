@@ -1,4 +1,4 @@
-import { TaskSpec } from "@withorbit/core";
+import { TaskSpec } from "@habilis/core";
 
 export interface Hasher {
   hash(spec: TaskSpec): string;

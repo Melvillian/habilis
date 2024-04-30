@@ -6,7 +6,7 @@ import {
   Task,
   TaskID,
   AttachmentID,
-} from "@withorbit/core";
+} from "@habilis/core";
 import { BlobLike } from "./genericHTTPAPI.js";
 import { RequiredSpec } from "./util/requiredSpec.js";
 

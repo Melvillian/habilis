@@ -1,4 +1,4 @@
-import { AttachmentID, AttachmentMIMEType } from "@withorbit/core";
+import { AttachmentID, AttachmentMIMEType } from "@habilis/core";
 
 export interface AttachmentStore {
   storeAttachment(

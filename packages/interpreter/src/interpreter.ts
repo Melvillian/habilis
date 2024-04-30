@@ -1,4 +1,4 @@
-import { Ingestible } from "@withorbit/ingester";
+import { Ingestible } from "@habilis/ingester";
 
 export interface Interpreter {
   interpret(files: InterpretableFile[]): Promise<Ingestible>;

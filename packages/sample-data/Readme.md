@@ -1,4 +1,4 @@
-# @withorbit/sample-data
+# @habilis/sample-data
 
 Sample data, mostly meant for use by test harnesses.
 

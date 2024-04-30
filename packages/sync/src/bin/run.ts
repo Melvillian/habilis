@@ -1,8 +1,8 @@
 import OrbitAPIClient, {
   defaultAPIConfig,
   emulatorAPIConfig,
-} from "@withorbit/api-client";
-import OrbitStoreFS from "@withorbit/store-fs";
+} from "@habilis/api-client";
+import OrbitStoreFS from "@habilis/store-fs";
 import { APISyncAdapter } from "../APISyncAdapter.js";
 import { syncOrbitStore } from "../sync.js";
 

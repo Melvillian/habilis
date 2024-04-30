@@ -1,5 +1,5 @@
 {
-  "name": "@withorbit/anki-import",
+  "name": "@habilis/anki-import",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "private": true,
@@ -8,8 +8,8 @@
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
   "dependencies": {
-    "@withorbit/core": "0.0.1",
-    "@withorbit/sample-data": "0.0.1",
+    "@habilis/core": "0.0.1",
+    "@habilis/sample-data": "0.0.1",
     "rehype-parse": "^9.0.0",
     "rehype-remark": "^10.0.0",
     "remark-stringify": "^11.0.0",

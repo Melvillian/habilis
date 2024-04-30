@@ -6,7 +6,7 @@ import {
   EventForEntity,
   EventID,
   IDOfEntity,
-} from "@withorbit/core";
+} from "@habilis/core";
 import {
   DatabaseBackend,
   DatabaseBackendEntityRecord,
@@ -14,7 +14,7 @@ import {
   DatabaseEventQuery,
   DatabaseQueryPredicate,
   DatabaseQueryPredicateRelation,
-} from "@withorbit/store-shared";
+} from "@habilis/store-shared";
 import Dexie, {
   Collection,
   IndexableType,

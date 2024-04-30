@@ -1,5 +1,5 @@
-import { AttachmentID, AttachmentMIMEType } from "@withorbit/core";
-import { AttachmentStore, encodeDataURL } from "@withorbit/store-shared";
+import { AttachmentID, AttachmentMIMEType } from "@habilis/core";
+import { AttachmentStore, encodeDataURL } from "@habilis/store-shared";
 import * as Dexie from "dexie";
 import { Dexie as DexieDB } from "dexie";
 

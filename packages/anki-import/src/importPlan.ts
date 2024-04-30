@@ -14,7 +14,7 @@ import {
   TaskRepetitionOutcome,
   TaskRescheduleEvent,
   TaskSpec,
-} from "@withorbit/core";
+} from "@habilis/core";
 import fs from "fs";
 import * as Anki from "./ankiPkg/index.js";
 import { Card, CardQueue, Collection } from "./ankiPkg/index.js";

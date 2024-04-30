@@ -3,7 +3,7 @@ import {
   MemoryTaskSpec,
   TaskContentType,
   TaskSpecType,
-} from "@withorbit/core";
+} from "@habilis/core";
 
 export const testClozeSpec: MemoryTaskSpec<ClozeTaskContent> = {
   type: TaskSpecType.Memory,

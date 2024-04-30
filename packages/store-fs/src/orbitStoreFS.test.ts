@@ -3,7 +3,7 @@ import {
   AttachmentMIMEType,
   AttachmentReference,
   EntityType,
-} from "@withorbit/core";
+} from "@habilis/core";
 import fs from "fs";
 import os from "os";
 import path from "path";

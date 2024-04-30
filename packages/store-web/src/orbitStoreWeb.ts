@@ -1,4 +1,4 @@
-import { Database, EventReducer, OrbitStore } from "@withorbit/store-shared";
+import { Database, EventReducer, OrbitStore } from "@habilis/store-shared";
 import { AttachmentStoreWeb } from "./attachmentStoreWeb.js";
 import { IDBDatabaseBackend } from "./indexedDB.js";
 

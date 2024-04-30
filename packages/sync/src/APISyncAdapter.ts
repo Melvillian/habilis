@@ -1,10 +1,10 @@
-import OrbitAPIClient from "@withorbit/api-client";
+import OrbitAPIClient from "@habilis/api-client";
 import {
   AttachmentID,
   AttachmentMIMEType,
   Event,
   EventID,
-} from "@withorbit/core";
+} from "@habilis/core";
 import { SyncAdapter } from "./syncAdapter.js";
 
 export class APISyncAdapter implements SyncAdapter {

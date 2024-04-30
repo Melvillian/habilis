@@ -6,7 +6,7 @@ import {
   TaskContentType,
   TaskSpec,
   TaskSpecType,
-} from "@withorbit/core";
+} from "@habilis/core";
 import { Note, splitAnkiDBNoteFields } from "./ankiPkg/index.js";
 import { AnkiAttachmentReference } from "./ankiPkg/ankiAttachmentReference.js";
 import parseAnkiField from "./ankiPkg/parseAnkiField.js";

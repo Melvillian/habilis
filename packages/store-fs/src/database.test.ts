@@ -1,4 +1,4 @@
-import { Database, runDatabaseTests } from "@withorbit/store-shared";
+import { Database, runDatabaseTests } from "@habilis/store-shared";
 import { SQLDatabaseBackend } from "./sqlite.js";
 
 describe("database tests", () => {

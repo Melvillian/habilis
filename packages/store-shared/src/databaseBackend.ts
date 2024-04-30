@@ -4,7 +4,7 @@ import {
   EventForEntity,
   EventID,
   IDOfEntity,
-} from "@withorbit/core";
+} from "@habilis/core";
 import { DatabaseEntityQuery, DatabaseEventQuery } from "./databaseQuery.js";
 
 export interface DatabaseBackend {

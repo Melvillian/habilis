@@ -1,4 +1,4 @@
-import { API } from "@withorbit/api";
+import { API } from "@habilis/api";
 import { getArrayBufferForBlob } from "react-native-blob-jsi-helper";
 
 export async function getBytesFromBlobLike(

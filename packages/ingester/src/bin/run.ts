@@ -1,4 +1,4 @@
-import OrbitStoreFS from "@withorbit/store-fs";
+import OrbitStoreFS from "@habilis/store-fs";
 import fs from "fs";
 import { ingestSources } from "../ingest.js";
 import { Ingestible } from "../ingestible.js";

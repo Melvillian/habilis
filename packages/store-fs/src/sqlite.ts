@@ -6,7 +6,7 @@ import {
   EventForEntity,
   EventID,
   IDOfEntity,
-} from "@withorbit/core";
+} from "@habilis/core";
 import {
   DatabaseBackend,
   DatabaseBackendEntityRecord,
@@ -14,7 +14,7 @@ import {
   DatabaseEventQuery,
   DatabaseQueryOptions,
   DatabaseQueryPredicate,
-} from "@withorbit/store-shared";
+} from "@habilis/store-shared";
 import { bufferToSQLBlob, openDatabase } from "./sqlite/binding.js";
 import { getMetadataValues, setMetadataValues } from "./sqlite/metadata.js";
 import { performMigration } from "./sqlite/migration.js";
