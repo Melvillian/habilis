@@ -3,7 +3,6 @@
     { "path": "./anki-import" },
     { "path": "./api" },
     { "path": "./api-client" },
-    { "path": "./app" },
     { "path": "./web-frontend" },
     { "path": "./server" },
     { "path": "./core" },
