@@ -1,0 +1,31 @@
+{
+  "name": "@withorbit/ingester",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "test": "jest",
+    "ingest": "node dist/bin/run.js",
+    "generateSchema": "typescript-json-schema src/ingestible.ts Ingestible -o src/ingestible.json --noExtraProps --required --ignoreErrors --strictNullChecks"
+  },
+  "dependencies": {
+    "@withorbit/core": "0.0.1",
+    "@withorbit/store-fs": "0.0.1",
+    "@withorbit/store-shared": "0.0.1",
+    "ajv": "^8.6.2",
+    "lodash.isequal": "^4.5.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-import-attributes": "^7.23.3",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.10.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.3",
+    "typescript-json-schema": "^0.50.0"
+  }
+}

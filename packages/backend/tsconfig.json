@@ -1,0 +1,26 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["dom", "es2019"],
+    "types": ["jest", "node"],
+    "target": "es2019"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../core"
+    },
+    {
+      "path": "../sample-data"
+    },
+    {
+      "path": "../api"
+    },
+    {
+      "path": "../store-shared"
+    }
+  ]
+}

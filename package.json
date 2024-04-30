@@ -1,13 +1,31 @@
 {
-  "name": "@habilis/source",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {},
   "private": true,
-  "dependencies": {},
+  "scripts": {
+    "build": "tsc -b packages/tsconfig.json",
+    "watch": "tsc -b -w packages/tsconfig.json",
+    "test:unit": "cd packages; jest --projects anki-import api-client ingester core web-component api store-fs store-web interpreter",
+    "test": "bun run test:unit; bun run --cwd packages/backend test",
+    "lint": "cd packages; eslint .",
+    "lint:fix": "cd packages; eslint --fix .",
+    "checkall": "bun run lint && bun run build && bun run test"
+  },
   "devDependencies": {
-    "@nx/js": "18.3.2",
-    "@nx/workspace": "18.3.2",
-    "nx": "18.3.2"
-  }
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "trustedDependencies": [
+    "sqlite3",
+    "remark-wiki-link"
+  ],
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "@withorbit/umbrella"
 }

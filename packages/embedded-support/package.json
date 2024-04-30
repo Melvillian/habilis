@@ -1,0 +1,17 @@
+{
+  "name": "@withorbit/embedded-support",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@withorbit/core": "0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Orbit",
+    "slug": "orbit",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app-assets/starburst-icon.png",
+    "assetBundlePatterns": ["**/*"],
+    "scheme": "com.withorbit.native",
+    "ios": {
+      "bundleIdentifier": "com.withorbit.native"
+    },
+    "android": {
+      "package": "com.withorbit.app"
+    },
+    "web": {
+      "build": {
+        "babel": {
+          "include": ["@withorbit/ui", "@withorbit/api-client"]
+        }
+      },
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/dr-bold.otf",
+            "./assets/fonts/dr-bolditalic.otf",
+            "./assets/fonts/dr-extrabold.otf",
+            "./assets/fonts/dr-extraboldItalic.otf",
+            "./assets/fonts/dr-extralight.otf",
+            "./assets/fonts/dr-extralightitalic.otf",
+            "./assets/fonts/dr-italic.otf",
+            "./assets/fonts/dr-light.otf",
+            "./assets/fonts/dr-lightitalic.otf",
+            "./assets/fonts/dr-medium.otf",
+            "./assets/fonts/dr-mediumitalic.otf",
+            "./assets/fonts/dr-regular.otf"
+          ]
+        }
+      ],
+      "./expoPlugin/expoPlugin.js",
+      "sentry-expo",
+      [
+        "expo-router",
+        {
+          "origin": "https://withorbit.com",
+          "asyncRoutes": {
+            "web": true,
+            "default": "development"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
