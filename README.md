@@ -21,8 +21,10 @@ primary focus of our work.
 This is Habilis' mono-repo, comprising many modular packages. You'll want to run
 `bun install` in the root to install dependencies before doing anything else.
 (We use [Bun](https://bun.sh) as our package manager and script runner.) From
-there, `bun run build` will build all the packages, and `bun test` will run all
-the tests.
+there, `bun run build` will build all the packages, and `bun run test` will run
+all the tests (note:
+[see this issue](https://github.com/oven-sh/bun/issues/7448) if you get errors
+with sqlite bindings).
 
 See the table below for an overview of this monorepo's packages, and see Readme
 files in individual package folders for details on each package.
