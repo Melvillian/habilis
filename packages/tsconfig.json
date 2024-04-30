@@ -11,7 +11,7 @@
     { "path": "./store-shared" },
     { "path": "./store-web" },
     { "path": "./sync" },
-
+    { "path": "./web-frontend" },
   ],
   "files": []
 }
