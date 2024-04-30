@@ -12,6 +12,14 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
+# Svelte
+build
+.svelte-kit
+.vercel
+.output
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
