@@ -1,4 +1,3 @@
-// A bit awkward: these definitions are "really" in @habilis/ui, but we don't want @habilis/core to depend on @habilis/ui. So we define just the names as a type here, and use a type constraint to make sure that the definitions in @habilis/ui don't differ from this.
 export type ColorPaletteName =
   | "red"
   | "orange"

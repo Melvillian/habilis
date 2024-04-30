@@ -10,6 +10,8 @@
     { "path": "./store-fs" },
     { "path": "./store-shared" },
     { "path": "./store-web" },
+    { "path": "./sync" },
+
   ],
   "files": []
 }
