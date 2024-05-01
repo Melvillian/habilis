@@ -1,0 +1,107 @@
+# Name of your application. Used to uniquely configure containers.
+service: habilis
+
+# Name of the container image.
+image: wclausen/habilis # todo: make this an actual docker image name in some registry
+
+# Deploy to these servers.
+servers:
+  web:
+    - 5.161.214.153
+  # worker:
+  #   - 5.161.214.153 # note, this is the same ip as "web" for now, bc load is sufficiently low
+  #   cmd: init_habilis worker # we'd provide a custom startup command to start our image in worker mode
+
+# Credentials for your image host.
+registry:
+  # Specify the registry server, if you're not using Docker Hub
+  # server: registry.digitalocean.com / ghcr.io / ...
+  username: wclausen # todo: make this an actual username for some registry
+
+  # Always use an access token rather than real password when possible.
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Inject ENV variables into containers (secrets come from .env).
+# Remember to run `kamal env push` after making changes!
+# env:
+#   clear:
+#     DB_HOST: 192.168.0.2
+#   secret:
+#     - RAILS_MASTER_KEY
+
+# Use a different ssh user than root
+# ssh:
+#   user: app
+
+# Configure builder setup.
+# builder:
+#   args:
+#     RUBY_VERSION: 3.2.0
+#   secrets:
+#     - GITHUB_TOKEN
+#   remote:
+#     arch: amd64
+#     host: ssh://app@192.168.0.1
+
+# Use accessory services (secrets come from .env).
+accessories:
+  db:
+    image: postgres:16
+    host: 5.161.230.186
+    port: 5432
+    env:
+      clear:
+        POSTGRES_DB: habilis
+        POSTGRES_USER: habilis
+      secret:
+        - POSTGRES_PASSWORD
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  redis:
+    image: redis:7.2.4 # TODO run our own redis to run in password-protected mode
+    host: 5.161.214.153
+    port: 6379
+    # TODO: uncomment when we move to password-protected redis
+    # env:
+    #   secret:
+    #     - REDIS_PASSWORD # pass the password to the redis container as an env var
+    volumes:
+      - redis_data:/data # persist redis data in a docker volume
+
+# Configure custom arguments for Traefik. Be sure to reboot traefik when you modify it.
+# traefik:
+#   args:
+#     accesslog: true
+#     accesslog.format: json
+
+# Configure a custom healthcheck (default is /up on port 3000)
+healthcheck:
+  path: /healthz
+  port: 3000
+
+# Bridge fingerprinted assets, like JS and CSS, between versions to avoid
+# hitting 404 on in-flight requests. Combines all files from new and old
+# version inside the asset_path.
+#
+# If your app is using the Sprockets gem, ensure it sets `config.assets.manifest`.
+# See https://github.com/basecamp/kamal/issues/626 for details
+#
+# asset_path: /rails/public/assets
+
+# Configure rolling deploys by setting a wait time between batches of restarts.
+# boot:
+#   limit: 10 # Can also specify as a percentage of total hosts, such as "25%"
+#   wait: 2
+
+# Configure the role used to determine the primary_host. This host takes
+# deploy locks, runs health checks during the deploy, and follow logs, etc.
+#
+# Caution: there's no support for role renaming yet, so be careful to cleanup
+#          the previous role on the deployed hosts.
+# primary_role: web
+
+# Controls if we abort when see a role with no hosts. Disabling this may be
+# useful for more complex deploy configurations.
+#
+# allow_empty_roles: false

@@ -8,4 +8,10 @@ router.get("/", (ctx, next) => {
   next();
 });
 
+router.get("/healthz", (ctx, next) => {
+  ctx.body = "OK";
+
+  next();
+});
+
 export default router;
