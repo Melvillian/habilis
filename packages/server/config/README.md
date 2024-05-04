@@ -20,7 +20,7 @@ This will be the primary command you run when interacting with kamal. It will do
 - when the new container is healthy, kamal will tell traefik to route to the new container
 - kamal will remove the old container
 
-Exactly what you want, nothing you don't. This part I think is fairly straigtforward, though I don't know much about traefik.
+Exactly what you want, nothing you don't. This part I think is fairly straightforward, though I don't know much about traefik.
 
 ### `kamal setup`
 

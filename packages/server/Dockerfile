@@ -5,11 +5,14 @@ WORKDIR /usr/src/app
 # Need this for the health checks to pass
 RUN apk add curl
 
+# install dependencies into temp directory
+# this will cache them and speed up future builds
 FROM base as install
 RUN mkdir -p /temp/dev
 COPY package.json /temp/dev/
 RUN cd /temp/dev && bun install
 
+# install with --production (exclude devDependencies)
 RUN mkdir -p /temp/prod
 COPY package.json /temp/prod/
 RUN cd /temp/prod && bun install --production
@@ -17,8 +20,6 @@ RUN cd /temp/prod && bun install --production
 FROM base AS prerelease
 COPY --from=install /temp/dev/node_modules node_modules
 COPY . .
-# our tsconfig.json references a "../tsconfig.base.json", so put that file there
-COPY ./tsconfig.base.json /usr/src/
 
 # verify that the app builds before deploys
 ENV NODE_ENV=production
