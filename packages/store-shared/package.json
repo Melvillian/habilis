@@ -1,0 +1,28 @@
+{
+  "name": "@habilis/store-shared",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "generateSchema": "typescript-json-schema src/validation/eventsValidator.ts Events -o src/validation/events.json --noExtraProps --required --ignoreErrors --strictNullChecks"
+  },
+  "dependencies": {
+    "@habilis/core": "0.0.1",
+    "ajv": "^8.6.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "@habilis/sample-data": "0.0.1",
+    "typescript": "^5.3.3",
+    "typescript-json-schema": "^0.50.1"
+  }
+}

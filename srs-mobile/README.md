@@ -1,3 +1,0 @@
-# SRS Mobile
-
-TODO!
