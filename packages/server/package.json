@@ -3,14 +3,18 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-		"dev": "bun dist/index.js",
-		"build": "tsc -b"
+    "dev": "bun --watch src/index.ts",
+    "build": "tsc -b",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "devDependencies": {
     "@types/koa": "^2.15.0",
     "@types/koa-compress": "^4.0.6",
     "@types/koa-router": "^7.4.8",
-    "@types/koa__cors": "^5.0.0"
+    "@types/koa__cors": "^5.0.0",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.21.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -18,9 +22,11 @@
   "dependencies": {
     "@koa/cors": "^5.0.0",
     "cls-rtracer": "^2.6.3",
+    "drizzle-orm": "^0.30.10",
     "koa": "^2.15.3",
     "koa-body": "^6.0.1",
     "koa-compress": "^5.1.1",
-    "koa-router": "^12.0.1"
+    "koa-router": "^12.0.1",
+    "pg": "^8.11.5"
   }
 }
