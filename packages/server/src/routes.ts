@@ -1,17 +1,20 @@
 import Router from "koa-router";
+import {db, EventTable} from "./db";
+
 
 const router = new Router();
 
-router.get("/", (ctx, next) => {
-  ctx.body = "It's Working!";
 
-  next();
+router.get("/", async (ctx, next) => {
+  ctx.body = await db.select().from(EventTable);
+
+  await next();
 });
 
-router.get("/healthz", (ctx, next) => {
+router.get("/healthz", async (ctx, next) => {
   ctx.body = "OK";
 
-  next();
+  await next();
 });
 
 export default router;
