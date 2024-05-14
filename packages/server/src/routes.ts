@@ -1,12 +1,12 @@
 import Router from "koa-router";
-import {db, EventTable} from "./db";
+import {getDatabase, EventTable} from "./db";
 
 
 const router = new Router();
 
 
 router.get("/", async (ctx, next) => {
-  ctx.body = await db.select().from(EventTable);
+  ctx.body = await getDatabase().select().from(EventTable);
 
   await next();
 });

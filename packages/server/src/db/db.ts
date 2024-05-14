@@ -1,4 +1,4 @@
-import { drizzle } from "drizzle-orm/node-postgres";
+import { NodePgDatabase, drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 
 /** -------------- Database Client Pool setup -------------- */
@@ -11,10 +11,18 @@ const database = process.env.POSTGRES_DB as string;
 const user = process.env.POSTGRES_USER as string;
 const password = process.env.POSTGRES_PASSWORD as string;
 
-const pool = new Pool({
-  connectionString: `postgresql://${user}:${password}@${host}:${port}/${database}`,
-});
+const db: NodePgDatabase | null = null;
 
-console.log(`⛁ Database connection established with connection string postgresql://${user}:********@${host}:${port}/${database}`);
+export const getDatabase = (): NodePgDatabase => {
+  if (!db) {
+    const pool = new Pool({
+      connectionString: `postgresql://${user}:${password}@${host}:${port}/${database}`,
+    });
+    
+    console.log(`⛁ Database connection established with connection string postgresql://${user}:********@${host}:${port}/${database}`);
+    
+    return drizzle(pool);
+  }
 
-export const db = drizzle(pool);
+  return db;
+}
