@@ -1,5 +1,5 @@
 {
-  "id": "a499a5c9-3931-452d-ac88-e8934219e188",
+  "id": "aab4decd-3876-4ab0-b745-cf532ab6233a",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "6",
   "dialect": "postgresql",
@@ -10,13 +10,13 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "serial",
+          "type": "uuid",
           "primaryKey": true,
           "notNull": true
         },
         "last_event_id": {
           "name": "last_event_id",
-          "type": "bigserial",
+          "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
@@ -30,6 +30,13 @@
         "user_id": {
           "name": "user_id",
           "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "card_type",
+          "typeSchema": "public",
           "primaryKey": false,
           "notNull": true
         },
@@ -51,17 +58,17 @@
           "primaryKey": false,
           "notNull": false
         },
+        "interval_millis": {
+          "name": "interval_millis",
+          "type": "integer[]",
+          "primaryKey": false,
+          "notNull": false
+        },
         "card_text": {
           "name": "card_text",
           "type": "text",
           "primaryKey": false,
           "notNull": true
-        },
-        "text_components": {
-          "name": "text_components",
-          "type": "text[]",
-          "primaryKey": false,
-          "notNull": false
         },
         "attachments": {
           "name": "attachments",
@@ -130,7 +137,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "bigserial",
+          "type": "uuid",
           "primaryKey": true,
           "notNull": true
         },
@@ -143,7 +150,14 @@
         },
         "card_id": {
           "name": "card_id",
-          "type": "serial",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "type",
+          "typeSchema": "public",
           "primaryKey": false,
           "notNull": true
         },
@@ -231,6 +245,16 @@
       "values": [
         "cloze",
         "qa"
+      ]
+    },
+    "public.type": {
+      "name": "type",
+      "schema": "public",
+      "values": [
+        "cardAdded",
+        "cardRemoved",
+        "cardUpdated",
+        "repetition"
       ]
     }
   },

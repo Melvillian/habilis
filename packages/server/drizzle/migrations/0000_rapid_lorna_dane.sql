@@ -4,23 +4,31 @@ EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;
 --> statement-breakpoint
+DO $$ BEGIN
+ CREATE TYPE "public"."type" AS ENUM('cardAdded', 'cardRemoved', 'cardUpdated', 'repetition');
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "cards" (
-	"id" serial PRIMARY KEY NOT NULL,
-	"last_event_id" bigserial NOT NULL,
+	"id" uuid PRIMARY KEY NOT NULL,
+	"last_event_id" uuid NOT NULL,
 	"created_at_timestamp_millis" timestamp with time zone DEFAULT now(),
 	"user_id" uuid NOT NULL,
+	"type" "card_type" NOT NULL,
 	"is_deleted" boolean,
 	"last_repetition_timestamp_millis" timestamptz[],
 	"due_timestamp_millis" timestamptz[],
+	"interval_millis" integer[],
 	"card_text" text NOT NULL,
-	"text_components" text[],
 	"attachments" jsonb[]
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "events" (
-	"id" bigserial PRIMARY KEY NOT NULL,
+	"id" uuid PRIMARY KEY NOT NULL,
 	"created_at_timestamp_millis" timestamp with time zone DEFAULT now() NOT NULL,
-	"card_id" serial NOT NULL,
+	"card_id" uuid NOT NULL,
+	"type" "type" NOT NULL,
 	"subfields" jsonb NOT NULL
 );
 --> statement-breakpoint

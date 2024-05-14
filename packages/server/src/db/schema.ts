@@ -1,4 +1,4 @@
-import { bigserial, jsonb, text, boolean, serial, timestamp, uuid, pgEnum, pgTable, index} from "drizzle-orm/pg-core"
+import { jsonb, text, boolean, integer, timestamp, uuid, pgEnum, pgTable, index} from "drizzle-orm/pg-core"
 
 export const cardTypeEnum = pgEnum("card_type", ["cloze", "qa"]);
 
@@ -8,16 +8,17 @@ type attachmentsJSONType = {
 }
 
 export const CardTable = pgTable("cards", {
-  id: serial("id").primaryKey(),
-  lastEventId: bigserial("last_event_id", { mode: "bigint"}).references(() => EventTable.id).notNull(),
+  id: uuid("id").primaryKey(),
+  lastEventId: uuid("last_event_id").references(() => EventTable.id).notNull(),
   createdAtTimestampMillis: timestamp("created_at_timestamp_millis", { withTimezone: true}).defaultNow(),
   userId: uuid("user_id").references(() => UserTable.id).notNull(),
+  type: cardTypeEnum("type").notNull(),
 
-  isDeleted: boolean("is_deleted"),
+  isDeleted: boolean("is_deleted").$default(() => false),
   lastRepetitionTimestampMillis: timestamp("last_repetition_timestamp_millis", { withTimezone: true}).notNull().array(),
   dueTimestampMillis: timestamp("due_timestamp_millis", { withTimezone: true}).notNull().array(),
+  intervalMillis: integer("interval_millis").notNull().array(),
   cardText: text("card_text").notNull(),
-  textComponents: text("text_components").notNull().array(),
   attachments: jsonb("attachments").$type<attachmentsJSONType>().array(),
 }, (table) => {
   return {
@@ -27,14 +28,22 @@ export const CardTable = pgTable("cards", {
   }
 });
 
+export const eventTypeEnum = pgEnum("type", [
+  "cardAdded",
+  "cardRemoved",
+  "cardUpdated",
+  "repetition",
+])
+
 
 export const EventTable = pgTable("events", {
-  id: bigserial("id", { mode: "bigint"}).primaryKey(),
+  id: uuid("id").primaryKey(),
   createdAtTimestampMillis: timestamp("created_at_timestamp_millis", { withTimezone: true }).notNull().defaultNow(),
-  cardId: serial("card_id").notNull(),
+  cardId: uuid("card_id").notNull(),
+  type: eventTypeEnum("type").notNull(),
 
-  // stores various fields of the different event types. See all of the types
-  // that inherit from EventBase inpackages/core/src/event.ts for all of the
+  // stores various fields of the different event types. See all of the interfaces
+  // that inherit from EventBase in packages/core/src/habilisEvent.ts for all of the
   // fields that gets stored in this column
   subfields: jsonb("subfields").notNull(),
 }, (table) => {
