@@ -7,3 +7,5 @@ export * from "./eventReducer.js";
 export * from "./generateUniqueID.js";
 export * from "./reviewQueue.js";
 export * from "./schedulers/spacedRepetitionScheduler.js";
+export * from "./habilisEvent.js";
+export * from "./habilisCard.js";
