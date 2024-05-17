@@ -1,5 +1,5 @@
 {
-  "id": "aab4decd-3876-4ab0-b745-cf532ab6233a",
+  "id": "8299a766-f21b-40b3-b6e2-eef174e80880",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "6",
   "dialect": "postgresql",
@@ -24,7 +24,7 @@
           "name": "created_at_timestamp_millis",
           "type": "timestamp with time zone",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "default": "now()"
         },
         "user_id": {
@@ -44,25 +44,25 @@
           "name": "is_deleted",
           "type": "boolean",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "last_repetition_timestamp_millis": {
           "name": "last_repetition_timestamp_millis",
           "type": "timestamp with time zone[]",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "due_timestamp_millis": {
           "name": "due_timestamp_millis",
           "type": "timestamp with time zone[]",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "interval_millis": {
           "name": "interval_millis",
           "type": "integer[]",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "card_text": {
           "name": "card_text",
@@ -74,7 +74,7 @@
           "name": "attachments",
           "type": "jsonb[]",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {
@@ -220,7 +220,7 @@
           "name": "created_at_timestamp_millis",
           "type": "timestamp with time zone",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "default": "now()"
         }
       },

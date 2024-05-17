@@ -1,9 +1,5 @@
-import { NodePgDatabase, drizzle } from "drizzle-orm/node-postgres";
+import { type NodePgDatabase, drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
-
-/** -------------- Database Client Pool setup -------------- */
-// import this file as `import { db } from src/db/` whenever you need a database connection.
-// Drizzle will read the drizzle.config.ts config to deteremine schemas and other configuration params
 
 const host = process.env.POSTGRES_HOST as string;
 const port = 5432;

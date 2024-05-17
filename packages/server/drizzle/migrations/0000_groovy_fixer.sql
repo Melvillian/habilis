@@ -13,15 +13,15 @@ END $$;
 CREATE TABLE IF NOT EXISTS "cards" (
 	"id" uuid PRIMARY KEY NOT NULL,
 	"last_event_id" uuid NOT NULL,
-	"created_at_timestamp_millis" timestamp with time zone DEFAULT now(),
+	"created_at_timestamp_millis" timestamp with time zone DEFAULT now() NOT NULL,
 	"user_id" uuid NOT NULL,
 	"type" "card_type" NOT NULL,
-	"is_deleted" boolean,
-	"last_repetition_timestamp_millis" timestamptz[],
-	"due_timestamp_millis" timestamptz[],
-	"interval_millis" integer[],
+	"is_deleted" boolean NOT NULL,
+	"last_repetition_timestamp_millis" timestamptz[] NOT NULL,
+	"due_timestamp_millis" timestamptz[] NOT NULL,
+	"interval_millis" integer[] NOT NULL,
 	"card_text" text NOT NULL,
-	"attachments" jsonb[]
+	"attachments" jsonb[] NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "events" (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS "users" (
 	"email" text NOT NULL,
 	"first_name" text NOT NULL,
 	"last_name" text NOT NULL,
-	"created_at_timestamp_millis" timestamp with time zone DEFAULT now()
+	"created_at_timestamp_millis" timestamp with time zone DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
 DO $$ BEGIN
